@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "SignUp";
+}
+
+@model SessionLoginWithAuthorizationUsingAspNetCore.Models.Account
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/Style.css" />
+</head>
+
+<body>
+    <h3> Sign Up Page</h3>
+
+    <form method="post" asp-controller="Account" asp-action="SignUp">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" asp-for="UserName" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" asp-for="Password" /></td>
+            </tr>
+            <tr>
+                <td>FullName</td>
+                <td><input type="text" asp-for="FullName" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Sign Up" />
+                    <br />
+                    <a asp-controller="Account" asp-action="Signup">Sign Up</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

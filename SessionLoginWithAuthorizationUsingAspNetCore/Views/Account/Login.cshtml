@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/Style.css" />
+</head>
+
+<body>
+
+
+    <div class="login">
+        <h1>Login to Web App</h1>
+        <form method="post" asp-controller="Account" asp-action="Login">
+            <td>Username</td>
+            <td><input type="text" name="username" class="form-control" /></td>
+            <td>Password </td>
+            <td><input type="password" name="password" class="form-control" /></td>
+            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            <br />
+            <a asp-controller="Account" asp-action="Signup">Sign Up</a>
+        </form>
+    </div>
+
+</body>
+</html>
+

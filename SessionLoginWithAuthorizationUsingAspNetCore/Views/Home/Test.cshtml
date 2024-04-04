@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+}
+
+<h1 class="text-center">Test</h1>
+
+<table border="1" class="table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Username</td>
+        <td>Password</td>
+        <td>FullName</td>
+    </tr>
+    @foreach (var user in ViewBag.Accounts)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.UserName</td>
+            <td>@user.Password</td>
+            <td>@user.FullName</td>
+        </tr>
+    }
+</table>
+
