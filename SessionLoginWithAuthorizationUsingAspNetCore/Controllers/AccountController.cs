@@ -24,6 +24,7 @@ namespace SessionLoginWithAuthorizationUsingAspNetCore.Controllers
             else
             {
                 HttpContext.Session.SetString("username", username);
+                TempData["username"] = username;
                 return View("Welcome");
             }
         }
